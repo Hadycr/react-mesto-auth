@@ -1,11 +1,12 @@
 import {useState} from 'react';
 
-function InfoTooltip({message}) {
-  let messageClassName = "popup__info-message"
-  if({message}) {
-    messageClassName += message.isSucess ? '...' : '...'
 
-  }
+function InfoTooltip({isOpen, img, info, onClose}) {
+  // let messageClassName = "popup__info-message"
+  // if({isOpen}) {
+  //   messageClassName += message.isSucess ? '...' : '...'
+
+  // }
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   
@@ -18,10 +19,11 @@ function InfoTooltip({message}) {
   // }
 
   return (
-    <div className={`popup popup_type_info ${message ? 'popup_opened' : ''}`}>
+    <div className={`popup popup__infotooltip ${isOpen ? 'popup_opened' : ''}`}>
       <div className="popup__container">
         <button className="popup__closed button" type="button" onClick={onClose}></button>
-        <p className></p>
+        <img className="popup__infotooltip_img" src={img} alt={info} />
+        <p className="popup__infotooltip_info">{info}</p>
       </div>
     </div>
   )

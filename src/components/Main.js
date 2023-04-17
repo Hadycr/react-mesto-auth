@@ -3,11 +3,18 @@ import pen from '../img/pen.svg';
 import plus from '../img/plus.svg';
 import Card from './Card';
 import {CurrentUserContext} from '../contexts/CurrentUserContext';
+import Header from './Header';
 
-function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike, onCardDelete, cards}) {
+function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike, onCardDelete, cards, email}) {
   const user = useContext(CurrentUserContext);
 
   return (
+    <>
+      <Header 
+        userStatus = 'Выйти'
+        pathname = "/sign-in"
+        email = {email}
+        />
     <main className="content">
       <section className="profile">
         <div className="profile__info">
@@ -38,6 +45,7 @@ function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike,
         </div>     
       </section>   
     </main>
+    </>
   )
 }
 

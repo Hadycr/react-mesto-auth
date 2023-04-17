@@ -1,7 +1,7 @@
 .login {
   display: flex;
   background: rgb(0,0,0,0.9);
-  position: fixed;
+  /* position: fixed; */
   justify-content: center;
   align-items: center;
   /* opacity: 0; */
