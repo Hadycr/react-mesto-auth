@@ -14,7 +14,7 @@ import Login from './Login';
 import InfoTooltip from './InfoTooltip';
 import ProtectedRoute from './ProtectedRoute';
 import {CurrentUserContext} from '../contexts/CurrentUserContext';
-import * as auth from '../utils/auth.js';
+import * as auth from '../utils/rest.js';
 import successImg from '../img/success.svg';
 import failureImg from '../img/fail.svg';
 
